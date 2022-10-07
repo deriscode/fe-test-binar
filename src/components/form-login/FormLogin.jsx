@@ -18,7 +18,6 @@ function FormInput() {
 			onSubmit={(values) => {
 				Axios.post(`${API_URL}/auth/login`, values)
 					.then((res) => {
-						console.log(res);
 						localStorage.setItem('auth', JSON.stringify(res.data.result));
 						navigate('/dashboard');
 					})
